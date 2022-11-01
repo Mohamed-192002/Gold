@@ -83,6 +83,7 @@
     left: 0;
     padding: 10px;
     border-radius: 5px;
+    font-size: 20px;
   }
   .header-area .links-container i.menu-active::after {
     content: "";
@@ -141,8 +142,10 @@
 .Home .into-text p {
   margin: 20px 0;
 }
+
 .Home .slider-cotainer img {
   width: 500px;
+  height: 270px;
 }
 .slider-controls li {
   background-color: #eee;
@@ -599,7 +602,65 @@
   cursor: pointer;
   color: var(--main-color);
 }
+@media (max-width: 576px) {
+  .icons {
+    margin: 20px 0;
+  }
+}
 /* end contact  */
+/* Start Nav Bullets */
+.nav-bullets {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+}
+.nav-bullets .bullet {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 3px solid var(--main-color);
+  margin: 0 0 20px 0;
+  padding: 7px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-bullets .bullet .tooltip {
+  background-color: #9d9d9d;
+  width: 110px;
+  position: absolute;
+  right: 30px;
+  top: -7px;
+  margin: 0;
+  color: black;
+  text-align: center;
+  padding: 5px;
+  display: none;
+  opacity: 1;
+  font-weight: bold;
+}
+.nav-bullets .bullet:hover {
+  background-color: #9d9d9d;
+}
+.nav-bullets .bullet:hover .tooltip {
+  display: block;
+}
+.nav-bullets .bullet .tooltip::after {
+  content: "";
+  border: 10px solid;
+  border-color: transparent transparent transparent #9d9d9d;
+  position: absolute;
+  right: -20px;
+}
+/* End Nav Bullets */
 /* Start Go Up Button  */
 .up {
   position: fixed;
@@ -609,5 +670,30 @@
   cursor: pointer;
   z-index: 1000;
   display: none;
+}
+.up .tooltip {
+  background-color: var(--main-color);
+  width: 100px;
+  position: absolute;
+  right: 42px;
+  top: 0px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  font-size: 20px;
+  display: none;
+  opacity: 1;
+}
+.up .tooltip::after {
+  content: "";
+  border: 10px solid;
+  border-color: transparent transparent transparent var(--main-color);
+  position: absolute;
+  right: -20px;
+  top: 6px;
+}
+.up:hover .tooltip {
+  display: block;
 }
 /* End Go Up Button  */
