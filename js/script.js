@@ -3,6 +3,7 @@ const menu = document.querySelector(".links-container i");
 const menuUl = document.querySelector(".header-area .links-container ul");
 const menuArrow = document.querySelector(".header-area i");
 const allLinks = document.querySelectorAll(".links a");
+const allBullets = document.querySelectorAll(".nav-bullets .bullet");
 menu.addEventListener("click", () => {
   menuUl.classList.toggle("open");
   menuArrow.classList.toggle("menu-active");
@@ -30,6 +31,7 @@ const scrollToSomeSection = (element) => {
   });
 };
 scrollToSomeSection(allLinks);
+scrollToSomeSection(allBullets);
 /* end header  */
 // start home
 const sliderLi = document.querySelectorAll(".slider-controls li ");
